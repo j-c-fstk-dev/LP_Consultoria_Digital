@@ -11,7 +11,7 @@ const features = [
 
 export default function Solution() {
   return (
-    <section className="section-spacing bg-white">
+    <section id="solution" className="section-spacing bg-white">
       <div className="container-custom grid md:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -50,23 +50,7 @@ export default function Solution() {
           transition={{ duration: 0.6 }}
           className="bg-bg-main p-8 rounded-3xl border border-border-light relative overflow-hidden"
         >
-          <div className="bg-white rounded-xl shadow-xl p-6 border border-border-light relative z-10">
-             <div className="flex items-center gap-3 mb-6 border-b border-border-light pb-4">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                <div className="ml-2 bg-gray-100 h-4 w-32 rounded"></div>
-             </div>
-             <div className="space-y-4">
-                <div className="h-8 bg-gray-100 w-3/4 rounded"></div>
-                <div className="h-4 bg-gray-50 w-full rounded"></div>
-                <div className="h-4 bg-gray-50 w-5/6 rounded"></div>
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                   <div className="aspect-square bg-blue-50 rounded-lg"></div>
-                   <div className="aspect-square bg-blue-50 rounded-lg"></div>
-                </div>
-             </div>
-          </div>
+          <img src="https://res.cloudinary.com/dr0weongo/image/upload/v1773506896/dashboard_faytmb.png" alt="Painel de gerenciamento" className="rounded-xl shadow-xl"/>
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-cta/5 rounded-full -ml-12 -mb-12"></div>

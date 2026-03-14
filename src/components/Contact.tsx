@@ -29,8 +29,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-bold text-text-main">WhatsApp Direto</p>
-                  <a href="https://wa.me/5512999999999" className="text-primary hover:underline font-medium">
-                    (12) 99999-9999
+                  <a href="https://wa.me/5512992185685" className="text-primary hover:underline font-medium">
+                    (12) 99218-5685
                   </a>
                 </div>
               </div>
@@ -62,13 +62,14 @@ export default function Contact() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action="mailto:jorgec.gmn@gmail.com" method="post" encType="text/plain" className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-text-main mb-1">Nome Completo</label>
                     <input 
                       required
                       type="text" 
+                      name="Nome"
                       placeholder="Seu nome"
                       className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     />
@@ -78,6 +79,7 @@ export default function Contact() {
                     <input 
                       required
                       type="text" 
+                      name="Empresa"
                       placeholder="Nome do seu negócio"
                       className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     />
@@ -89,6 +91,7 @@ export default function Contact() {
                     <input 
                       required
                       type="text" 
+                      name="Cidade"
                       placeholder="Ex: Pinda"
                       className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     />
@@ -97,7 +100,8 @@ export default function Contact() {
                     <label className="block text-sm font-semibold text-text-main mb-1">WhatsApp</label>
                     <input 
                       required
-                      type="tel" 
+                      type="tel"
+                      name="WhatsApp" 
                       placeholder="(12) 99999-9999"
                       className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     />
@@ -107,6 +111,7 @@ export default function Contact() {
                   <label className="block text-sm font-semibold text-text-main mb-1">Site Atual (Opcional)</label>
                   <input 
                     type="url" 
+                    name="Site"
                     placeholder="https://www.seusite.com.br"
                     className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                   />
@@ -128,6 +133,7 @@ export default function Contact() {
                   <label className="block text-sm font-semibold text-text-main mb-1">Mensagem Curta (Opcional)</label>
                   <textarea 
                     rows={2}
+                    name="Mensagem"
                     placeholder="Como podemos te ajudar?"
                     className="w-full px-4 py-3 rounded-lg border border-border-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
                   ></textarea>

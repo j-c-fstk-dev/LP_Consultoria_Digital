@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Problems from "./components/Problems";
 import WhoThisIsFor from "./components/WhoThisIsFor";
@@ -24,6 +25,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export default function App() {
   return (
     <main className="min-h-screen">
+      <Header />
       <Hero />
       <Problems />
       <WhoThisIsFor />
