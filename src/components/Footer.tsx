@@ -8,7 +8,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm mb-4">Ajudando o comércio local a crescer na internet.</p>
             <div className="text-xs text-gray-400">
               <p className="font-semibold uppercase mb-1">Áreas de Atendimento:</p>
-              <p>Pindamonhangaba • Taubaté • Tremembé • Campos do Jordão • Vale do Paraíba</p>
+              <p>Pindamonhangaba • Taubaté • São José dos Campos • Tremembé • Guaratinguetá • Campos do Jordão • Atendimento online em todo o Brasil</p>
             </div>
           </div>
           

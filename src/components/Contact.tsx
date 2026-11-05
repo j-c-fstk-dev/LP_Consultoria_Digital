@@ -5,9 +5,22 @@ import { MessageCircle, Send, CheckCircle2 } from "lucide-react";
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real app, you'd send the data here
+    const data = new FormData(e.currentTarget);
+    const hasWebsite = data.get("hasWebsite");
+    const lines = [
+      "Olá! Quero solicitar o diagnóstico digital gratuito.",
+      `Nome: ${data.get("Nome") ?? ""}`,
+      `Empresa: ${data.get("Empresa") ?? ""}`,
+      `Cidade: ${data.get("Cidade") ?? ""}`,
+      `WhatsApp: ${data.get("WhatsApp") ?? ""}`,
+      data.get("Site") ? `Site atual: ${data.get("Site")}` : "",
+      hasWebsite ? `Já tem site: ${hasWebsite === "yes" ? "Sim" : "Não"}` : "",
+      data.get("Mensagem") ? `Mensagem: ${data.get("Mensagem")}` : "",
+    ].filter(Boolean);
+    const url = `https://wa.me/5512992185685?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -36,8 +49,8 @@ export default function Contact() {
               </div>
               
               <div className="p-6 bg-white rounded-2xl border border-border-light shadow-sm">
-                <p className="text-text-main font-medium mb-2 italic">"A análise foi fundamental para entender por que meu restaurante não aparecia nas buscas. Depois das melhorias, muito mais clientes começaram a nos encontrar no Google."</p>
-                <p className="text-sm text-gray-500">— João Silva, Restaurante Sabor de Pinda</p>
+                <p className="text-text-main font-medium mb-2">Como funciona depois do envio</p>
+                <p className="text-sm text-gray-600">Seus dados abrem uma conversa no WhatsApp. Eu analiso sua presença no Google, site e redes sociais e te devolvo um resumo com os pontos de melhoria, sem custo.</p>
               </div>
             </div>
           </div>
@@ -53,7 +66,7 @@ export default function Contact() {
                   <CheckCircle2 size={48} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-main mb-4">Solicitação Enviada!</h3>
-                <p className="text-gray-600">Obrigado pelo interesse. Nossa equipe entrará em contato em até 24 horas via WhatsApp.</p>
+                <p className="text-gray-600">Abrimos o WhatsApp com seus dados. É só tocar em enviar na conversa e respondemos em até 24 horas úteis.</p>
                 <button 
                   onClick={() => setSubmitted(false)}
                   className="mt-8 text-primary font-bold hover:underline"
@@ -62,7 +75,7 @@ export default function Contact() {
                 </button>
               </motion.div>
             ) : (
-              <form action="mailto:jorgec.gmn@gmail.com" method="post" encType="text/plain" className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-text-main mb-1">Nome Completo</label>

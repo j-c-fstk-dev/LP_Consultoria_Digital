@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Problems from "./components/Problems";
 import WhoThisIsFor from "./components/WhoThisIsFor";
+import Segments from "./components/Segments";
 import Solution from "./components/Solution";
 import FreeDiagnosis from "./components/FreeDiagnosis";
 import RaioXDigital from "./components/RaioXDigital";
@@ -29,6 +30,7 @@ export default function App() {
       <Hero />
       <Problems />
       <WhoThisIsFor />
+      <Segments />
       <Solution />
       <FreeDiagnosis />
       <RaioXDigital />

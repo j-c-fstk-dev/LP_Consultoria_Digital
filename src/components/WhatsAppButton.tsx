@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/5512992185685?text=Olá! Gostaria de solicitar um diagnóstico digital para o meu negócio."
+      href="https://wa.me/5512992185685?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20digital%20para%20o%20meu%20neg%C3%B3cio."
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
