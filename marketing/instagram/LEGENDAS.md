@@ -193,6 +193,6 @@ Sites e sistemas para advogados e transportadoras
 Diagnóstico digital grátis 👇
 ```
 
-**Link:** https://consultoriadigitaljc.netlify.app/#contact
+**Link:** https://consultoriadigitaljc.netlify.app/ (o site agora leva direto ao WhatsApp)
 
 **Destaques:** Quem sou · Advocacia · Transportes · Modelos · Como funciona
