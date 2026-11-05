@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moraes & Valente Advocacia · Taubaté (demonstração)</title>
+<meta name="description" content="Projeto demonstrativo de site para escritório de advocacia, criado por JC Consultoria Digital.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F2EF; --surface:#FFFFFF; --ink:#18211E; --muted:#56635D; --line:#CFD6D1;
+  --forest:#1F3D31; --sage:#A9BBB0; --oxblood:#7B2D26;
+  --serif:"Literata", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", "Segoe UI", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans)}
+a{color:var(--forest)}
+:focus-visible{outline:2px solid var(--oxblood);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.demo{background:var(--forest);color:#E6ECE8;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:#fff}
+
+header.site{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--sans);font-weight:400;font-size:13px;color:var(--muted);letter-spacing:0}
+header nav{display:flex;gap:20px;flex-wrap:wrap}
+header nav a{color:var(--muted);text-decoration:none;font-size:15px}
+header nav a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;padding-block:56px 72px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-.02em;margin:0 0 24px;text-wrap:balance}
+.hero p{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 32px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:2px;font-weight:600;font-size:16px;text-decoration:none;border:1px solid var(--forest)}
+.btn.solid{background:var(--forest);color:#fff}
+.btn.solid:hover{background:#16302A}
+.btn.line{color:var(--forest);background:transparent}
+.btn.line:hover{background:#E4E9E5}
+
+.index{background:var(--surface);border:1px solid var(--line);padding:28px 28px 12px;align-self:start}
+.index h2{font-family:var(--serif);font-weight:600;font-size:18px;margin:0 0 4px}
+.index > p{font-size:14px;color:var(--muted);margin:0 0 16px}
+.index ol{list-style:none;margin:0;padding:0}
+.index li{border-top:1px solid var(--line)}
+.index a{display:grid;grid-template-columns:2.2em 1fr;gap:8px;padding:12px 0;text-decoration:none;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.4}
+.index a span{color:var(--oxblood);font-weight:600}
+.index a:hover{color:var(--forest)}
+
+section.block{padding-block:72px;border-bottom:1px solid var(--line)}
+.block h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.4vw,38px);letter-spacing:-.015em;line-height:1.15;margin:0 0 12px}
+.block .intro{color:var(--muted);max-width:38em;margin:0 0 40px}
+
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.area{padding:28px 28px 8px 0}
+.area + .area{padding-left:28px;border-left:1px solid var(--line)}
+.area h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:0 0 8px}
+.area p{color:var(--muted);font-size:16px;margin:0 0 16px}
+.area ul{margin:0;padding-left:18px;font-size:15px}
+.area li{margin-bottom:6px}
+
+.faq{max-width:780px}
+.faq details{border-top:1px solid var(--line);padding:4px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:2.4em 1fr auto;gap:8px;padding:18px 0;font-family:var(--serif);font-size:20px;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary span{color:var(--oxblood);font-weight:600}
+.faq summary::after{content:"+";font-family:var(--sans);color:var(--muted);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 0 20px 2.9em;color:var(--muted);max-width:40em}
+.faq .ans p{margin:0 0 10px}
+
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.person{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start}
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,#C9D3CD,#9EB0A5);display:flex;align-items:flex-end;justify-content:center;color:var(--forest);font-family:var(--serif);font-size:40px;padding-bottom:12px}
+.person h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:0}
+.oab{font-size:14px;color:var(--muted);margin:2px 0 12px}
+.person p{font-size:16px;color:var(--muted);margin:0}
+
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.visit dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px}
+.visit dt{color:var(--muted);font-size:15px}
+.visit dd{margin:0}
+.steps{margin:0;padding-left:20px}
+.steps li{margin-bottom:12px}
+
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
+footer p{margin:0 0 8px;max-width:60em}
+
+@media (max-width:860px){
+  .hero,.visit{grid-template-columns:1fr;gap:40px}
+  .areas{grid-template-columns:1fr}
+  .area,.area + .area{padding:24px 0 8px;border-left:0;border-top:1px solid var(--line)}
+  .area:first-child{border-top:0}
+  .team{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  .person{grid-template-columns:88px 1fr;gap:16px}
+  .faq summary{font-size:18px}
+  .faq .ans{padding-left:0}
+}
+</style>
+</head>
+<body>
+<div class="demo">Projeto demonstrativo. Escritório fictício criado por <a href="/">JC Consultoria Digital</a> para mostrar um site de advocacia.</div>
+
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="#">Moraes &amp; Valente<small>Advocacia · Taubaté, SP</small></a>
+    <nav aria-label="Principal">
+      <a href="#areas">Áreas de atuação</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#escritorio">O escritório</a>
+      <a href="#atendimento">Atendimento</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Direito do trabalho, previdenciário e de família, com atendimento próximo em Taubaté.</h1>
+      <p>Explicamos sua situação em linguagem clara, dizemos quais caminhos existem e acompanhamos cada etapa do processo com você.</p>
+      <div class="actions">
+        <a class="btn solid" href="https://wa.me/5512992185685?text=Ol%C3%A1!%20Vi%20o%20site%20demonstrativo%20de%20advocacia%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener">Agendar uma conversa</a>
+        <a class="btn line" href="#duvidas">Ler as dúvidas comuns</a>
+      </div>
+    </div>
+    <aside class="index" aria-label="Dúvidas comuns">
+      <h2>Perguntas que mais recebemos</h2>
+      <p>Respostas informativas. Cada caso tem particularidades.</p>
+      <ol>
+        <li><a href="#q1"><span>§ 1</span>Fui demitido sem justa causa. O que devo receber?</a></li>
+        <li><a href="#q2"><span>§ 2</span>Quanto tempo tenho para entrar com uma ação trabalhista?</a></li>
+        <li><a href="#q3"><span>§ 3</span>Meu benefício do INSS foi negado. E agora?</a></li>
+        <li><a href="#q4"><span>§ 4</span>Como funciona o divórcio consensual em cartório?</a></li>
+      </ol>
+    </aside>
+  </section>
+
+  <section class="block" id="areas">
+    <h2>Áreas de atuação</h2>
+    <p class="intro">Concentramos o trabalho em três áreas para conhecer bem as regras e a rotina dos tribunais da região.</p>
+    <div class="areas">
+      <div class="area">
+        <h3>Trabalhista</h3>
+        <p>Para trabalhadores e pequenas empresas.</p>
+        <ul>
+          <li>Verbas rescisórias e horas extras</li>
+          <li>Reconhecimento de vínculo</li>
+          <li>Acidente e doença do trabalho</li>
+          <li>Consultoria preventiva para empregadores</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h3>Previdenciário</h3>
+        <p>Pedidos e recursos junto ao INSS.</p>
+        <ul>
+          <li>Aposentadorias e planejamento</li>
+          <li>Auxílio por incapacidade</li>
+          <li>BPC/LOAS</li>
+          <li>Revisão de benefícios</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h3>Família</h3>
+        <p>Com discrição e cuidado em momentos difíceis.</p>
+        <ul>
+          <li>Divórcio judicial e em cartório</li>
+          <li>Guarda e convivência</li>
+          <li>Pensão alimentícia</li>
+          <li>Inventário e partilha</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="duvidas">
+    <h2>Dúvidas comuns</h2>
+    <p class="intro">Conteúdo informativo, de caráter geral. Para saber como a lei se aplica ao seu caso, converse com um advogado.</p>
+    <div class="faq">
+      <details id="q1" open>
+        <summary><span>§ 1</span>Fui demitido sem justa causa. O que devo receber?</summary>
+        <div class="ans"><p>Em regra: saldo de salário, aviso prévio (trabalhado ou indenizado), 13º e férias proporcionais com 1/3, saque do FGTS com multa de 40% e acesso ao seguro-desemprego, se cumpridos os requisitos.</p><p>O pagamento deve ocorrer em até 10 dias após o fim do contrato. Guarde o termo de rescisão e os holerites.</p></div>
+      </details>
+      <details id="q2">
+        <summary><span>§ 2</span>Quanto tempo tenho para entrar com uma ação trabalhista?</summary>
+        <div class="ans"><p>Até 2 anos depois do fim do contrato, podendo cobrar direitos dos últimos 5 anos trabalhados. Quanto antes você buscar orientação, mais fácil reunir documentos e testemunhas.</p></div>
+      </details>
+      <details id="q3">
+        <summary><span>§ 3</span>Meu benefício do INSS foi negado. E agora?</summary>
+        <div class="ans"><p>É possível apresentar recurso administrativo em até 30 dias da ciência da decisão, ou entrar com ação na Justiça Federal. Antes, vale entender o motivo da negativa na carta de indeferimento, no Meu INSS.</p></div>
+      </details>
+      <details id="q4">
+        <summary><span>§ 4</span>Como funciona o divórcio consensual em cartório?</summary>
+        <div class="ans"><p>Quando o casal está de acordo e não há filhos menores ou incapazes (ou as questões deles já foram resolvidas judicialmente), o divórcio pode ser feito por escritura pública, com a presença obrigatória de advogado.</p></div>
+      </details>
+      <details id="q5">
+        <summary><span>§ 5</span>Quais documentos levar na primeira conversa?</summary>
+        <div class="ans"><p>Documento com foto, comprovante de endereço e tudo o que tiver sobre o assunto: carteira de trabalho, holerites, cartas do INSS, certidões. Se não tiver tudo, venha assim mesmo.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="escritorio">
+    <h2>O escritório</h2>
+    <p class="intro">Fundado em 2014 no centro de Taubaté. Atendimento presencial e online para todo o Vale do Paraíba.</p>
+    <div class="team">
+      <div class="person">
+        <div class="portrait" aria-hidden="true">HM</div>
+        <div>
+          <h3>Helena Moraes</h3>
+          <p class="oab">OAB/SP 000.000 (fictício)</p>
+          <p>Atua no direito do trabalho e previdenciário. Especialista em Direito Previdenciário.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="portrait" aria-hidden="true">RV</div>
+        <div>
+          <h3>Rafael Valente</h3>
+          <p class="oab">OAB/SP 000.001 (fictício)</p>
+          <p>Atua no direito de família e sucessões. Mediador formado pelo tribunal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="atendimento">
+    <h2>Atendimento</h2>
+    <div class="visit">
+      <dl>
+        <dt>Endereço</dt><dd>Rua Exemplo, 100, sala 12<br>Centro, Taubaté, SP</dd>
+        <dt>Horário</dt><dd>Segunda a sexta, 9h às 18h</dd>
+        <dt>WhatsApp</dt><dd>(12) 90000-0000</dd>
+        <dt>E-mail</dt><dd>contato@exemplo.adv.br</dd>
+      </dl>
+      <div>
+        <h3 style="font-family:var(--serif);font-weight:600;font-size:22px;margin:0 0 12px">Como funciona a primeira conversa</h3>
+        <ol class="steps">
+          <li>Você manda uma mensagem contando, em poucas linhas, o que aconteceu.</li>
+          <li>Marcamos um horário, no escritório ou por vídeo.</li>
+          <li>Explicamos os caminhos possíveis, os prazos e os documentos necessários.</li>
+        </ol>
+        <a class="btn solid" href="https://wa.me/5512992185685?text=Ol%C3%A1!%20Vi%20o%20site%20demonstrativo%20de%20advocacia%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener">Enviar mensagem</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Moraes &amp; Valente Advocacia é um escritório fictício. Nomes, números de OAB e contatos são ilustrativos.</p>
+    <p>Este modelo segue o Provimento 205/2021 do CFOAB: conteúdo informativo, sem menção a honorários, promessas de resultado, casos de clientes ou símbolos da OAB.</p>
+    <p>Site desenvolvido por <a href="/">JC Consultoria Digital</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

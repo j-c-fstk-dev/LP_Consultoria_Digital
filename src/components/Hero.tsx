@@ -18,11 +18,11 @@ export default function Hero() {
             Apareça no Google, atraia mais clientes e organize a presença digital da sua empresa.
           </h1>
           <p className="text-gray-600 mb-8 text-xl">
-            Existem diferentes formas de melhorar sua presença digital. Você pode começar com algo simples ou construir uma solução completa para atrair mais clientes em Pindamonhangaba e no Vale do Paraíba.
+            Sites, presença no Google e sistemas sob medida para escritórios de advocacia, transportadoras e negócios locais de Pindamonhangaba e de todo o Vale do Paraíba.
           </p>
           <div className="mb-8 p-4 bg-blue-50/50 rounded-xl border-l-4 border-primary">
             <p className="text-text-main font-medium">
-              Mais de 80% dos clientes procuram empresas no Google antes de entrar em contato.
+              A maioria dos clientes pesquisa a empresa no Google antes de entrar em contato.
             </p>
             <p className="text-gray-600 text-sm mt-1">
               Se o seu negócio não aparece nas buscas, você pode estar perdendo clientes todos os dias.
@@ -37,7 +37,7 @@ export default function Hero() {
               <ArrowRight size={20} />
             </button>
             <a 
-              href="https://wa.me/5512999999999?text=Olá! Gostaria de solicitar um diagnóstico digital para o meu negócio." 
+              href="https://wa.me/5512992185685?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20digital%20para%20o%20meu%20neg%C3%B3cio." 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-cta text-lg"
@@ -69,8 +69,8 @@ export default function Hero() {
                 <ArrowRight size={20} />
               </div>
               <div>
-                <p className="font-bold text-sm text-text-main">+45% Visibilidade</p>
-                <p className="text-xs text-gray-500">Média em Pinda e região</p>
+                <p className="font-bold text-sm text-text-main">Atendimento direto</p>
+                <p className="text-xs text-gray-500">Você fala com quem desenvolve</p>
               </div>
             </div>
           </div>

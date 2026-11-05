@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
-import { Utensils, Store, Sparkles, Stethoscope, Wrench, Briefcase } from "lucide-react";
+import { Scale, Truck, Store, Stethoscope, Wrench, Briefcase } from "lucide-react";
 
 const clients = [
-  { icon: <Utensils size={24} />, name: "Restaurantes" },
-  { icon: <Store size={24} />, name: "Lojas Locais" },
-  { icon: <Sparkles size={24} />, name: "Salões de Beleza" },
+  { icon: <Scale size={24} />, name: "Escritórios de Advocacia" },
+  { icon: <Truck size={24} />, name: "Transportadoras e Logística" },
+  { icon: <Store size={24} />, name: "Comércio Local" },
   { icon: <Stethoscope size={24} />, name: "Clínicas" },
   { icon: <Wrench size={24} />, name: "Oficinas Mecânicas" },
   { icon: <Briefcase size={24} />, name: "Pequenos Prestadores de Serviço" }
