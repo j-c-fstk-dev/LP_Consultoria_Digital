@@ -1,55 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #1E40AF;
-  --color-secondary: #2563EB;
-  --color-bg-main: #F8FAFC;
-  --color-text-main: #0F172A;
-  --color-cta: #22C55E;
-  --color-cta-hover: #16A34A;
-  --color-border-light: #E5E7EB;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Libre Franklin", "Segoe UI", system-ui, sans-serif;
+
+  --color-paper: #F3F4F2;
+  --color-surface: #FFFFFF;
+  --color-ink: #14181D;
+  --color-muted: #5A616A;
+  --color-line: #D9DCD6;
+  --color-navy: #1C3354;
+  --color-navy-deep: #13253F;
+  --color-sky: #DCE6F2;
+  --color-wa: #1FA855;
 }
 
 @layer base {
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
-    @apply font-sans bg-bg-main text-text-main;
+    @apply bg-paper text-ink font-sans antialiased;
+    font-size: 17px;
     line-height: 1.6;
   }
-  h1 {
-    @apply text-[48px] font-bold leading-tight;
+  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--color-navy); outline-offset: 3px; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[1160px] px-5 md:px-10; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-[3px] px-6 py-4 font-semibold text-[16px] leading-none transition-colors;
   }
-  h2 {
-    @apply text-[32px] font-semibold leading-snug;
-  }
-  h3 {
-    @apply text-[24px] font-medium leading-normal;
-  }
-  p {
-    @apply text-[18px];
-  }
-}
-
-.section-spacing {
-  @apply py-20;
-}
-
-.container-custom {
-  @apply max-w-[1200px] mx-auto px-6;
-}
-
-.btn {
-  @apply px-6 py-3 rounded-[8px] font-bold transition-all duration-200 inline-flex items-center justify-center gap-2;
-}
-
-.btn-primary {
-  @apply bg-primary text-white hover:bg-secondary;
-}
-
-.btn-cta {
-  @apply bg-cta text-white hover:bg-cta-hover;
-}
-
-.card {
-  @apply bg-white rounded-[12px] border border-border-light shadow-sm p-6;
+  .btn-primary { @apply bg-navy text-white hover:bg-navy-deep; }
+  .btn-ghost { @apply border border-navy text-navy hover:bg-sky/60; }
 }
