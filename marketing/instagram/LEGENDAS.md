@@ -1,10 +1,27 @@
 # Instagram: 9 primeiras publicações
 
-As imagens estão nas pastas ao lado (1080×1350, formato retrato do feed). Publique de 01 a 09, uma ou duas por dia. Depois, fixe a 01 (apresentação), a 03 (OAB) e a 09 (diagnóstico) no topo do perfil.
+Imagens em 1080×1350 (formato retrato do feed), uma pasta por publicação. Publique de 01 a 09, uma por dia. Depois, fixe no topo do perfil a 01 (apresentação), a 02 (onde perde clientes) e a 09 (modelo do seu setor).
 
 Para editar um texto: altere `conteudo.mjs` e rode `node marketing/instagram/gerar.mjs`.
 
-**Antes de publicar:** os links dos modelos (`/demos/advocacia` e `/demos/transportes`) só funcionam depois que o site novo estiver no ar.
+---
+
+## Perfil
+
+**Nome:** Jorge C. | Sites para empresas
+
+**Bio:**
+```
+Sites para empresas e profissionais que vendem confiança
+📍 Pindamonhangaba · Vale do Paraíba · online
+Veja um modelo do seu setor, sem compromisso 👇
+```
+
+**Link:** https://consultoriadigitaljc.netlify.app/
+
+**Foto do perfil:** a mesma do site, recortada no rosto.
+
+**Destaques:** Quem sou · Como funciona · Modelos · Dúvidas
 
 ---
 
@@ -13,37 +30,37 @@ Para editar um texto: altere `conteudo.mjs` e rode `node marketing/instagram/ger
 Pasta: `01-apresentacao/`
 
 ```
-Oi, eu sou o Jorge 👋
+Antes de ligar, o cliente pesquisa sua empresa. O que ele encontra decide se ele liga para você ou para o concorrente.
 
-Moro em Pindamonhangaba e trabalho com sites, presença no Google e sistemas simples para dois tipos de empresa: escritórios de advocacia e transportadoras.
+Prazer, eu sou o Jorge. Desenvolvo sites para empresas e profissionais que vendem confiança: escritórios de advocacia, transportadoras, clínicas, contabilidades e prestadores de serviço do Vale do Paraíba.
 
-Por que só esses dois? Porque cada um tem regras e rotinas próprias. O site de um advogado precisa seguir as normas de publicidade da OAB. O de uma transportadora precisa responder cotação rápido. Conhecer isso faz diferença no resultado.
+Como eu trabalho:
+• Você fala direto comigo, do orçamento ao suporte
+• Proposta com escopo, prazo e preço por escrito
+• Domínio, hospedagem e acessos ficam no seu nome
+• Site no ar em até 15 dias úteis
 
-Aqui no perfil vou postar dicas práticas para quem quer ser encontrado no Google, modelos de site e bastidores do trabalho.
+Quer ver como ficaria o site da sua empresa? Me chame no WhatsApp (12) 99218-5685 e peça um modelo do seu setor. Sem compromisso.
 
-Quer saber como sua empresa aparece hoje? Me chama no direct ou no WhatsApp (12) 99218-5685 e eu faço um diagnóstico gratuito.
-
-#pindamonhangaba #valedoparaiba #taubate #saojosedoscampos #criacaodesites #sitesprofissionais #marketingjuridico #transportadora
+#pindamonhangaba #valedoparaiba #taubate #saojosedoscampos #criacaodesites #sitesprofissionais
 ```
 
-## 02 · 5 erros no site do escritório (carrossel, 7 imagens)
+## 02 · Onde empresas boas perdem clientes (carrossel, 5 imagens)
 
-Pasta: `02-erros-site-advocacia/`
+Pasta: `02-onde-perde-clientes/`
 
 ```
-Seu escritório tem site, mas o telefone não toca? Pode ser um desses 5 erros.
+Tem empresa excelente perdendo cliente para concorrente pior. Quase sempre por um destes três motivos:
 
-1. Não abre bem no celular
-2. Não diz em qual cidade e em quais áreas você atende
-3. O contato está escondido
-4. O site só fala do escritório e não responde às dúvidas do cliente
-5. O perfil no Google Maps está abandonado
+1. O cliente não encontra você. Ele pesquisa o seu serviço na sua cidade e aparece outra empresa.
+2. Encontra, mas não confia. Site antigo, lento ou amador passa a impressão errada sobre o seu trabalho.
+3. Desiste na hora do contato. Telefone escondido, formulário longo, resposta que demora.
 
-A boa notícia: todos têm solução simples e dentro das regras da OAB.
+Nenhum deles tem a ver com a qualidade do que você entrega. E todos têm solução.
 
-Salve para revisar depois e mande para um colega advogado. Se quiser, eu olho o site do seu escritório de graça.
+Me mande o nome da sua empresa no WhatsApp que eu te digo, sem custo, qual desses está acontecendo com você.
 
-#advocacia #advogados #marketingjuridico #advogadotaubate #advogadosaojosedoscampos #valedoparaiba #sitesparaadvogados
+#marketingdigital #empreendedorismo #pequenasempresas #googlemaps #valedoparaiba #pindamonhangaba
 ```
 
 ## 03 · OAB: o que pode e o que não pode (carrossel, 5 imagens)
@@ -51,17 +68,17 @@ Salve para revisar depois e mande para um colega advogado. Se quiser, eu olho o 
 Pasta: `03-oab-pode-nao-pode/`
 
 ```
-Muito advogado não investe em site por medo de desrespeitar as regras da OAB. Dá para ter presença digital forte e ficar dentro da norma.
+Muito advogado adia o site por receio de descumprir as regras da OAB. Dá para ter presença digital forte e ficar dentro da norma.
 
 O Provimento 205/2021 do Conselho Federal permite site, redes sociais, Google Maps, conteúdo informativo e até anúncios pagos, desde que a publicidade seja informativa, discreta e sóbria.
 
 O que não pode: divulgar honorários para atrair clientes, prometer resultado, expor casos ou clientes, ostentação ligada à profissão e uso dos símbolos da OAB.
 
-Todos os sites que eu faço para escritórios seguem essas regras.
+Os sites que eu faço para escritórios seguem essas regras desde o primeiro rascunho. Peça no WhatsApp um modelo de site para advocacia.
 
-Conteúdo informativo. Para dúvidas sobre um caso específico, consulte a OAB da sua seccional.
+Conteúdo informativo. Em caso de dúvida sobre um caso específico, consulte a OAB da sua seccional.
 
-#provimento205 #publicidadenaadvocacia #marketingjuridico #oab #advocacia #advogados #valedoparaiba
+#provimento205 #publicidadenaadvocacia #marketingjuridico #advocacia #advogados #valedoparaiba
 ```
 
 ## 04 · Modelo de site para advocacia (imagem única)
@@ -69,35 +86,29 @@ Conteúdo informativo. Para dúvidas sobre um caso específico, consulte a OAB d
 Pasta: `04-modelo-advocacia/`
 
 ```
-Um modelo de site para escritório de advocacia que eu desenvolvi.
+Um modelo de site que desenvolvi para escritórios de advocacia.
 
-O que ele tem:
-• Áreas de atuação explicadas de forma clara
-• Respostas para as dúvidas mais comuns dos clientes
-• Agendamento direto pelo WhatsApp
-• Visual sóbrio e dentro das regras da OAB
+O cliente chega com uma dúvida e sai sabendo três coisas: em quais áreas o escritório atua, que a dúvida dele tem resposta e como agendar uma conversa pelo WhatsApp. Tudo em linguagem clara e dentro das regras da OAB.
 
-É um projeto demonstrativo, com escritório fictício. Abra no celular pelo link na bio e navegue como se fosse um cliente.
-
-Quer um assim para o seu escritório? Me chama.
+É um projeto demonstrativo, com escritório fictício. Quer ver como ficaria com o nome e as áreas do seu escritório? Me chame no WhatsApp.
 
 #sitesparaadvogados #advocacia #marketingjuridico #webdesign #valedoparaiba
 ```
 
 ## 05 · Cotação de frete (carrossel, 5 imagens)
 
-Pasta: `05-cotacao-transportadora/`
+Pasta: `05-cotacao-de-frete/`
 
 ```
-Quantas cotações sua transportadora perde por demorar a responder?
+No frete, quem responde a cotação primeiro costuma levar o cliente.
 
-Quando o cliente pede frete pelo WhatsApp, a conversa vira um pingue-pongue: origem, destino, peso, volumes, data... Enquanto isso, ele já cotou com outras duas empresas.
+O problema é que, pelo WhatsApp, uma cotação vira pingue-pongue: origem, destino, peso, volumes, data. Enquanto a conversa anda, o cliente já pediu preço para mais duas transportadoras.
 
-Um formulário de cotação no site resolve: o cliente preenche tudo de uma vez e a mensagem chega pronta no seu WhatsApp. Você só calcula e responde.
+Um formulário no site pede tudo de uma vez e entrega a cotação pronta no seu WhatsApp. Você só calcula e responde.
 
-Comenta "COTAÇÃO" que eu te mando o link de um modelo funcionando.
+Peça no WhatsApp o modelo de site para transportadora e teste o formulário funcionando.
 
-#transportadora #logistica #frete #transportes #valedoparaiba #viadutra #pindamonhangaba #taubate
+#transportadora #logistica #frete #transportes #viadutra #valedoparaiba #pindamonhangaba
 ```
 
 ## 06 · Modelo de site para transportadora (imagem única)
@@ -105,94 +116,78 @@ Comenta "COTAÇÃO" que eu te mando o link de um modelo funcionando.
 Pasta: `06-modelo-transportadora/`
 
 ```
-Modelo de site para transportadora, feito para quem trabalha no eixo da Dutra.
+Modelo de site para transportadora, pensado para quem roda no eixo da Dutra.
 
 • Formulário de cotação que chega pronto no WhatsApp
-• Rotas e cidades atendidas, com km da rodovia
-• Frota com capacidade de cada veículo
+• Rotas e cidades atendidas, com o km da rodovia
+• Frota com a capacidade de cada veículo
 • Cadastro de motoristas e agregados
 
-Projeto demonstrativo, com empresa fictícia. Teste a cotação pelo link na bio.
+Projeto demonstrativo, com empresa fictícia. Quer ver com a sua frota e as suas rotas? Me chame no WhatsApp.
 
-#transportadora #logistica #frete #sitesprofissionais #valedoparaiba #viadutra
+#transportadora #logistica #frete #sitesprofissionais #viadutra
 ```
 
-## 07 · Reels: "Pesquisei isso no Google"
+## 07 · Reels: "Fiz essa pesquisa no Google"
 
 Pasta: `07-reels-capa/` (use a imagem como capa do Reels)
 
-**Roteiro (30 a 45 segundos), gravado na tela do celular:**
+**Roteiro (30 a 45 segundos), gravado com a tela do celular:**
 
-1. **(0–3 s)** Tela do Google. Digite devagar: "advogado previdenciário em pindamonhangaba". Texto na tela: *"Fiz essa pesquisa. Olha o que aparece."*
-2. **(3–12 s)** Role o mapa e os resultados. Narração: "Esses são os escritórios que aparecem para quem procura advogado previdenciário aqui na cidade."
-3. **(12–25 s)** Aponte, sem mostrar nomes (borre se precisar): "Esse tem 40 avaliações e fotos. Esse não tem nem horário de funcionamento. Adivinha para qual o cliente liga primeiro?"
-4. **(25–35 s)** "Aparecer aqui não é sorte. É perfil completo, categoria certa, fotos e avaliações."
-5. **(35–45 s)** Texto na tela: *"Quer saber como seu escritório aparece? Diagnóstico grátis, link na bio."*
+1. **0 a 3 s:** tela do Google. Digite devagar "contador em pindamonhangaba" (troque pelo setor que quiser). Texto na tela: *"Fiz essa pesquisa. Olha o que aparece."*
+2. **3 a 12 s:** role o mapa e os resultados. Narração: "Esses são os escritórios que aparecem para quem procura contador aqui na cidade."
+3. **12 a 25 s:** aponte, sem mostrar nomes (borre se precisar): "Esse tem fotos, horário e 40 avaliações. Esse não tem nem telefone. Para qual você ligaria?"
+4. **25 a 35 s:** "Aparecer aqui não é sorte. É perfil completo, categoria certa, fotos reais e avaliações."
+5. **35 a 45 s:** texto na tela: *"Quer saber como sua empresa aparece? Me chame no WhatsApp."*
 
 **Legenda:**
 
 ```
-Fiz uma pesquisa simples no Google e o resultado diz muito sobre quem recebe mais clientes.
+Fiz uma pesquisa simples no Google e o resultado mostra quem recebe mais ligações.
 
-Seu escritório aparece quando alguém da sua cidade procura pela sua área? Me manda "diagnóstico" no direct que eu verifico para você, sem custo.
+Sua empresa aparece quando alguém da sua cidade procura pelo seu serviço? Me mande o nome dela no WhatsApp que eu verifico, sem custo.
 
-#advocacia #marketingjuridico #googlemaps #pindamonhangaba #valedoparaiba
+#googlemaps #marketinglocal #pindamonhangaba #valedoparaiba #pequenasempresas
 ```
 
-> Não mostre nomes de escritórios reais nem fale mal de ninguém. O ponto é mostrar o que faz diferença, não expor concorrentes.
+> Não mostre nomes de empresas reais nem fale mal de ninguém. O ponto é mostrar o que faz diferença, não expor concorrentes.
 
 ## 08 · Google Maps em 6 passos (carrossel, 8 imagens)
 
 Pasta: `08-google-maps-passos/`
 
 ```
-Seu negócio aparece no Google Maps quando alguém procura pelo que você faz?
+O perfil no Google Maps é, muitas vezes, a primeira coisa que o cliente vê da sua empresa. Antes do site, antes do Instagram.
 
 Em 6 passos:
 1. Reivindique o perfil
-2. Escolha a categoria certa
-3. Preencha tudo: endereço, horário, contatos e descrição
-4. Coloque fotos reais
+2. Escolha a categoria principal certa
+3. Preencha endereço, horário, contatos e descrição
+4. Use fotos reais
 5. Peça avaliações para clientes satisfeitos
 6. Responda as avaliações e mantenha o perfil atualizado
 
-Salve este post para fazer com calma. Se preferir que eu configure para você, é só chamar.
+Salve para fazer com calma. Se preferir que eu configure junto com o seu site, é só me chamar no WhatsApp.
 
-#googlemaps #perfildaempresa #googlemeunegocio #marketinglocal #valedoparaiba #pindamonhangaba #taubate
+#googlemaps #perfildaempresa #googlemeunegocio #marketinglocal #valedoparaiba #pindamonhangaba
 ```
 
-## 09 · Diagnóstico gratuito (carrossel, 3 imagens)
+## 09 · Veja um modelo do seu setor (carrossel, 3 imagens)
 
-Pasta: `09-diagnostico-gratis/`
+Pasta: `09-modelo-do-seu-setor/`
 
 ```
-Diagnóstico digital gratuito para escritórios de advocacia e transportadoras do Vale do Paraíba.
+Contratar um site sem saber como ele vai ficar é um risco. Por isso eu começo mostrando.
 
-Eu analiso:
-• Como sua empresa aparece no Google e no Maps
-• Como o seu site funciona no celular
-• O que dá para melhorar primeiro
+Você me diz o seu setor e eu te mando um modelo de site do seu ramo, para ver o resultado antes de decidir qualquer coisa:
+• Advocacia
+• Transportes e logística
+• Saúde e clínicas
+• Contabilidade
+• Construção e reformas
+• Ou me conte o que você faz
 
-Você recebe um vídeo curto pelo WhatsApp com 3 melhorias práticas. Sem custo e sem compromisso.
+Mande "modelo" e o seu setor no WhatsApp (12) 99218-5685. Respondo em até 1 dia útil, sem compromisso.
 
-Para pedir: mande "diagnóstico" no direct ou no WhatsApp (12) 99218-5685.
-
-#diagnosticodigital #advocacia #transportadora #valedoparaiba #pindamonhangaba #saojosedoscampos #taubate
+#criacaodesites #sitesprofissionais #pindamonhangaba #taubate #saojosedoscampos #valedoparaiba
 ```
-
----
-
-## Bio e destaques
-
-**Nome do perfil:** Jorge C. | Sites para Advogados e Transportes
-
-**Bio:**
-```
-Sites e sistemas para advogados e transportadoras
-📍 Pinda · Vale do Paraíba · online
-Diagnóstico digital grátis 👇
-```
-
-**Link:** https://consultoriadigitaljc.netlify.app/ (o site agora leva direto ao WhatsApp)
-
-**Destaques:** Quem sou · Advocacia · Transportes · Modelos · Como funciona
