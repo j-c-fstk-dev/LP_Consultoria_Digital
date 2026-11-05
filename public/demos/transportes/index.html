@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rota Vale Transportes · Pindamonhangaba (demonstração)</title>
+<meta name="description" content="Projeto demonstrativo de site para transportadora, criado por JC Consultoria Digital.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#1C1F22; --asphalt-2:#2A2E33; --plate:#0A6A45; --plate-dark:#07543A;
+  --concrete:#E4E5E1; --white:#FFFFFF; --muted:#5D6166; --line:#C9CBC6; --reflect:#F2C200;
+  --sans:"Overpass", "Segoe UI", system-ui, sans-serif;
+  --mono:"Overpass Mono", ui-monospace, Menlo, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--concrete);color:var(--asphalt);font:400 17px/1.6 var(--sans)}
+a{color:var(--plate)}
+:focus-visible{outline:3px solid var(--reflect);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.demo{background:var(--asphalt);color:#C9CDD2;font-size:13px;text-align:center;padding:8px 16px}
+.demo a{color:var(--reflect)}
+
+.top{background:var(--asphalt);color:var(--white)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px;color:var(--white);text-decoration:none;letter-spacing:-.01em}
+.top nav{display:flex;gap:20px;flex-wrap:wrap}
+.top nav a{color:#C9CDD2;text-decoration:none;font-size:15px}
+.top nav a:hover{color:var(--white)}
+
+/* Hero: the road sign */
+.road{background:var(--asphalt);padding-block:40px 0;position:relative;overflow:hidden}
+.road::after{content:"";position:absolute;left:0;right:0;bottom:28px;height:6px;background:repeating-linear-gradient(90deg,var(--reflect) 0 64px,transparent 64px 112px)}
+.road .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end;padding-bottom:72px}
+.sign{background:var(--plate);border-radius:14px;padding:10px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.sign-inner{border:4px solid var(--white);border-radius:8px;padding:28px 28px 22px;color:var(--white)}
+.shield{display:inline-grid;place-items:center;width:64px;height:70px;background:var(--white);color:var(--asphalt);clip-path:polygon(0 0,100% 0,100% 62%,50% 100%,0 62%);font:700 13px/1 var(--mono);text-align:center;padding-bottom:14px;margin-bottom:16px}
+.shield b{display:block;font-size:22px}
+.sign h1{font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1;margin:0 0 6px;letter-spacing:-.02em}
+.sign .sub{font-size:18px;margin:0 0 22px;color:#D8EDE3}
+.dest{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;border-top:2px solid rgba(255,255,255,.35);padding-top:16px;font-size:20px;font-weight:600}
+.dest .km{font-family:var(--mono);font-weight:700}
+.dest .arrow{font-size:26px;line-height:1}
+.pitch{color:var(--white)}
+.pitch p{font-size:20px;color:#D5D9DE;margin:0 0 24px;max-width:28em}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:6px;font:800 16px var(--sans);text-decoration:none;border:0;cursor:pointer}
+.btn.go{background:var(--reflect);color:var(--asphalt)}
+.btn.go:hover{background:#FFD21F}
+.btn.ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px #5A6068}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--white)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;color:#C9CDD2;font-size:15px}
+.facts b{display:block;font:700 22px var(--mono);color:var(--white)}
+
+section.blk{padding-block:72px}
+.blk h2{font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 10px}
+.blk .intro{color:var(--muted);max-width:40em;margin:0 0 36px}
+
+/* Quote form styled as a waybill */
+.waybill{background:var(--white);border:2px solid var(--asphalt);max-width:880px}
+.wb-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--asphalt);color:var(--white);padding:12px 18px;font:700 14px var(--mono)}
+.wb-grid{display:grid;grid-template-columns:repeat(6,1fr)}
+.f{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 14px 12px;min-width:0}
+.f label{display:block;font:500 12px var(--mono);color:var(--muted);margin-bottom:4px}
+.f input,.f select,.f textarea{width:100%;border:0;background:transparent;font:600 17px var(--sans);color:var(--asphalt);padding:2px 0;outline:none}
+.f textarea{resize:vertical;min-height:52px}
+.f input::placeholder,.f textarea::placeholder{color:#A3A7AB;font-weight:400}
+.f:focus-within{background:#F7F8F4;box-shadow:inset 3px 0 0 var(--plate)}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s6{grid-column:span 6}
+.wb-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 18px}
+.wb-foot p{margin:0;font-size:14px;color:var(--muted);max-width:32em}
+.btn.plate{background:var(--plate);color:var(--white)}
+.btn.plate:hover{background:var(--plate-dark)}
+.sent{margin:0;padding:12px 18px;background:#E3F1EA;color:var(--plate-dark);font-weight:600;border-top:1px solid var(--line)}
+
+/* Routes */
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.kmtable{width:100%;border-collapse:collapse;background:var(--white)}
+.kmtable th,.kmtable td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+.kmtable th{font:500 12px var(--mono);color:var(--muted)}
+.kmtable td.km{font:700 16px var(--mono);font-variant-numeric:tabular-nums;color:var(--plate)}
+.extra{background:var(--asphalt);color:var(--white);padding:28px;border-radius:6px}
+.extra h3{margin:0 0 12px;font-size:22px}
+.extra ul{margin:0;padding-left:20px;color:#D5D9DE}
+.extra li{margin-bottom:8px}
+
+/* Fleet */
+.fleet{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:3px solid var(--asphalt);background:var(--white)}
+.veh{padding:20px 18px;border-right:1px solid var(--line)}
+.veh:last-child{border-right:0}
+.veh svg{display:block;height:34px;width:auto;margin-bottom:12px}
+.veh h3{margin:0;font-size:19px}
+.veh .cap{font:700 15px var(--mono);color:var(--plate);margin:2px 0 8px}
+.veh p{margin:0;font-size:15px;color:var(--muted)}
+
+.join{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;background:var(--plate);color:var(--white);padding:40px;border-radius:6px}
+.join h2{color:var(--white)}
+.join p{color:#D8EDE3;margin:0}
+.join ul{margin:0;padding-left:20px}
+.join li{margin-bottom:8px}
+
+footer{background:var(--asphalt);color:#9EA4AB;font-size:14px;padding-block:36px}
+footer p{margin:0 0 8px}
+footer a{color:var(--reflect)}
+
+@media (max-width:900px){
+  .road .wrap,.routes,.join{grid-template-columns:1fr}
+  .fleet{grid-template-columns:repeat(2,1fr)}
+  .veh{border-bottom:1px solid var(--line)}
+  .wb-grid{grid-template-columns:repeat(2,1fr)}
+  .s2,.s3{grid-column:span 1}.s6{grid-column:span 2}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  .sign-inner{padding:20px 16px 16px}
+  .dest{font-size:17px}
+  .wb-grid{grid-template-columns:1fr}
+  .s2,.s3,.s6{grid-column:span 1}
+  .join{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Projeto demonstrativo. Transportadora fictícia criada por <a href="/">JC Consultoria Digital</a> para mostrar um site de transportes.</div>
+
+<div class="top"><div class="wrap">
+  <a class="logo" href="#">Rota Vale Transportes</a>
+  <nav aria-label="Principal">
+    <a href="#cotacao">Cotação</a>
+    <a href="#rotas">Rotas</a>
+    <a href="#frota">Frota</a>
+    <a href="#motoristas">Motoristas</a>
+  </nav>
+</div></div>
+
+<section class="road">
+  <div class="wrap">
+    <div class="sign" role="img" aria-label="Placa: Rota Vale Transportes, Via Dutra. São Paulo a 150 km, Rio de Janeiro a 280 km.">
+      <div class="sign-inner">
+        <div class="shield"><span>BR<b>116</b></span></div>
+        <h1>Rota Vale Transportes</h1>
+        <p class="sub">Cargas fracionadas e lotação pela Via Dutra</p>
+        <div class="dest">
+          <span class="arrow" aria-hidden="true">←</span><span>São Paulo</span><span class="km">150 km</span>
+          <span class="arrow" aria-hidden="true">→</span><span>Rio de Janeiro</span><span class="km">280 km</span>
+        </div>
+      </div>
+    </div>
+    <div class="pitch">
+      <p>Coleta no Vale do Paraíba e entrega em São Paulo, Rio e Sul de Minas. Cotação respondida no mesmo dia útil.</p>
+      <div class="actions">
+        <a class="btn go" href="#cotacao">Pedir cotação de frete</a>
+        <a class="btn ghost" href="#rotas">Ver rotas atendidas</a>
+      </div>
+      <div class="facts">
+        <span><b>Pinda</b>base no km 99</span>
+        <span><b>5</b>tipos de veículo</span>
+        <span><b>Seg–Sáb</b>coletas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="cotacao">
+  <div class="wrap">
+    <h2>Cotação de frete</h2>
+    <p class="intro">Preencha o que souber. A cotação chega para a nossa equipe pelo WhatsApp e respondemos no mesmo dia útil.</p>
+    <form class="waybill" id="quote" novalidate>
+      <div class="wb-head"><span>SOLICITAÇÃO DE COTAÇÃO</span><span id="wbno">Nº —</span></div>
+      <div class="wb-grid">
+        <div class="f s3"><label for="q-origem">Origem (cidade/UF)</label><input id="q-origem" name="origem" required placeholder="Pindamonhangaba/SP"></div>
+        <div class="f s3"><label for="q-destino">Destino (cidade/UF)</label><input id="q-destino" name="destino" required placeholder="São Paulo/SP"></div>
+        <div class="f s2"><label for="q-carga">Tipo de carga</label>
+          <select id="q-carga" name="carga">
+            <option>Carga seca / paletizada</option><option>Peças e autopeças</option><option>Material de construção</option><option>Mudança comercial</option><option>Outro</option>
+          </select></div>
+        <div class="f s2"><label for="q-peso">Peso aproximado (kg)</label><input id="q-peso" name="peso" inputmode="numeric" placeholder="1.200"></div>
+        <div class="f s2"><label for="q-vol">Volumes / paletes</label><input id="q-vol" name="volumes" inputmode="numeric" placeholder="4"></div>
+        <div class="f s2"><label for="q-data">Data de coleta</label><input id="q-data" name="data" type="date"></div>
+        <div class="f s2"><label for="q-nome">Seu nome</label><input id="q-nome" name="nome" required placeholder="Nome e empresa"></div>
+        <div class="f s2"><label for="q-fone">WhatsApp</label><input id="q-fone" name="fone" type="tel" placeholder="(12) 90000-0000"></div>
+        <div class="f s6"><label for="q-obs">Observações</label><textarea id="q-obs" name="obs" placeholder="Precisa de ajudante, horário de doca, nota fiscal..."></textarea></div>
+      </div>
+      <div class="wb-foot">
+        <p>Nesta demonstração, o pedido abre uma conversa com a JC Consultoria Digital.</p>
+        <button class="btn plate" type="submit">Enviar cotação pelo WhatsApp</button>
+      </div>
+      <p class="sent" id="sent" hidden>Abrimos o WhatsApp com os dados da cotação. Toque em enviar na conversa.</p>
+    </form>
+  </div>
+</section>
+
+<section class="blk" id="rotas" style="padding-top:0">
+  <div class="wrap routes">
+    <div>
+      <h2>Rotas atendidas</h2>
+      <p class="intro">Saídas diárias pelo eixo da Dutra. Quilômetros aproximados da rodovia no trecho paulista.</p>
+      <table class="kmtable">
+        <thead><tr><th>Cidade</th><th>Dutra</th><th>Frequência</th></tr></thead>
+        <tbody>
+          <tr><td>Guaratinguetá</td><td class="km">km 65</td><td>Diária</td></tr>
+          <tr><td>Pindamonhangaba</td><td class="km">km 99</td><td>Base</td></tr>
+          <tr><td>Taubaté</td><td class="km">km 110</td><td>Diária</td></tr>
+          <tr><td>São José dos Campos</td><td class="km">km 145</td><td>Diária</td></tr>
+          <tr><td>Jacareí</td><td class="km">km 160</td><td>Diária</td></tr>
+          <tr><td>Guarulhos / São Paulo</td><td class="km">km 220+</td><td>Diária</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="extra">
+      <h3>Também atendemos</h3>
+      <ul>
+        <li>Rio de Janeiro e Baixada Fluminense, 3 vezes por semana</li>
+        <li>Litoral Norte pela Rodovia dos Tamoios</li>
+        <li>Sul de Minas pela Fernão Dias, sob consulta</li>
+        <li>Cargas dedicadas para qualquer destino no Sudeste</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="frota" style="padding-top:0">
+  <div class="wrap">
+    <h2>Frota</h2>
+    <p class="intro">Do VUC que entra no centro da cidade à carreta para lotação completa.</p>
+    <div class="fleet">
+      <div class="veh"><svg viewBox="0 0 60 30" aria-hidden="true"><rect x="2" y="6" width="34" height="16" fill="#1C1F22"/><path d="M36 10h12l8 7v5H36z" fill="#0A6A45"/><circle cx="12" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="46" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/></svg><h3>VUC</h3><p class="cap">até 3 t</p><p>Entregas urbanas com restrição de circulação.</p></div>
+      <div class="veh"><svg viewBox="0 0 66 30" aria-hidden="true"><rect x="2" y="4" width="40" height="18" fill="#1C1F22"/><path d="M42 9h13l9 8v5H42z" fill="#0A6A45"/><circle cx="12" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="54" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/></svg><h3>3/4</h3><p class="cap">até 4 t</p><p>Fracionado regional e e-commerce.</p></div>
+      <div class="veh"><svg viewBox="0 0 76 30" aria-hidden="true"><rect x="2" y="3" width="50" height="19" fill="#1C1F22"/><path d="M52 8h13l9 9v5H52z" fill="#0A6A45"/><circle cx="14" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="64" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/></svg><h3>Toco</h3><p class="cap">até 6 t</p><p>Paletizados e material de construção.</p></div>
+      <div class="veh"><svg viewBox="0 0 86 30" aria-hidden="true"><rect x="2" y="3" width="60" height="19" fill="#1C1F22"/><path d="M62 8h13l9 9v5H62z" fill="#0A6A45"/><circle cx="12" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="22" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="74" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/></svg><h3>Truck</h3><p class="cap">até 14 t</p><p>Transferências entre cidades do eixo.</p></div>
+      <div class="veh"><svg viewBox="0 0 110 30" aria-hidden="true"><rect x="2" y="2" width="78" height="20" fill="#1C1F22"/><path d="M84 8h12l10 9v5H84z" fill="#0A6A45"/><circle cx="12" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="22" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="32" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/><circle cx="98" cy="24" r="4" fill="#1C1F22" stroke="#E4E5E1" stroke-width="2"/></svg><h3>Carreta</h3><p class="cap">até 27 t</p><p>Lotação completa SP ⇄ RJ.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="motoristas" style="padding-top:0">
+  <div class="wrap">
+    <div class="join">
+      <div>
+        <h2>Motoristas e agregados</h2>
+        <p>Buscamos motoristas com CNH C ou E e agregados com veículo próprio para rotas fixas no Vale.</p>
+      </div>
+      <div>
+        <ul>
+          <li>Rotas regionais com volta para casa</li>
+          <li>Pagamento semanal para agregados</li>
+          <li>Rastreamento e seguro de carga por nossa conta</li>
+        </ul>
+        <a class="btn go" style="margin-top:12px" href="https://wa.me/5512992185685?text=Ol%C3%A1!%20Vi%20o%20site%20demonstrativo%20de%20transportadora%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener">Quero me cadastrar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p>Rota Vale Transportes é uma empresa fictícia. CNPJ, RNTRC, endereço e telefones são ilustrativos.</p>
+  <p>Site desenvolvido por <a href="/">JC Consultoria Digital</a>. Quer um site assim para a sua transportadora? <a href="https://wa.me/5512992185685" target="_blank" rel="noopener">Fale no WhatsApp</a>.</p>
+</div></footer>
+
+<script>
+(function(){
+  var no = 'Nº ' + String(Date.now()).slice(-6);
+  document.getElementById('wbno').textContent = no;
+  var form = document.getElementById('quote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var o = form.origem.value.trim(), d = form.destino.value.trim(), n = form.nome.value.trim();
+    var missing = [[form.origem,o],[form.destino,d],[form.nome,n]].filter(function(x){return !x[1];});
+    if (missing.length){ missing[0][0].focus(); missing[0][0].placeholder = 'Preencha este campo'; return; }
+    var lines = [
+      'Solicitação de cotação ' + no,
+      'Origem: ' + o, 'Destino: ' + d,
+      'Carga: ' + form.carga.value,
+      form.peso.value ? 'Peso: ' + form.peso.value + ' kg' : '',
+      form.volumes.value ? 'Volumes: ' + form.volumes.value : '',
+      form.data.value ? 'Coleta: ' + form.data.value.split('-').reverse().join('/') : '',
+      'Contato: ' + n + (form.fone.value ? ' · ' + form.fone.value : ''),
+      form.obs.value ? 'Obs.: ' + form.obs.value : ''
+    ].filter(Boolean);
+    window.open('https://wa.me/5512992185685?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    document.getElementById('sent').hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
